@@ -1,7 +1,15 @@
 from random import randrange
 import math
-lower_bound = int(input("Please enter lower bound: ")) 
-upper_bound = int(input("Please enter upper bound: "))
+def main():
+    game_mode = int(input("Choose game mode \nuser to guess the number, press 1 \ncomputer to guess the number, press 2"))
+    lower_bound = int(input("Please enter lower bound: ")) 
+    upper_bound = int(input("Please enter upper bound: "))
+    if game_mode == 1:
+        guess_the_number_user(lower_bound,upper_bound)
+    elif game_mode == 2:
+        guess_the_number_computer(lower_bound,upper_bound)
+
+
 
 def guess_the_number_user(lower_bound,upper_bound):
     number_to_guess = randrange(lower_bound,upper_bound)
@@ -18,4 +26,6 @@ def guess_the_number_user(lower_bound,upper_bound):
 
     print( f"Congratulation! You guessed the number {number_to_guess} in {guess_counter} tries")
 
-guess_the_number_user(lower_bound,upper_bound)
+def guess_the_number_computer():
+    return
+
