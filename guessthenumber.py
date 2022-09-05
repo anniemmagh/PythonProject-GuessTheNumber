@@ -26,6 +26,12 @@ def guess_the_number_user(lower_bound,upper_bound):
 
     print( f"Congratulation! You guessed the number {number_to_guess} in {guess_counter} tries")
 
-def guess_the_number_computer():
+def guess_the_number_computer(lower_bound,upper_bound):
+    feedback = ' '
+    computer_guess = math.inf
+    while feedback != 'c':
+        computer_guess = randrange(lower_bound,upper_bound)
+   
     return
 
+main()
