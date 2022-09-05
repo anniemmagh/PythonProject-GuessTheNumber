@@ -25,21 +25,39 @@ def guess_the_number_user(lower_bound,upper_bound):
             print("Too big, Try again: ")
 
     print( f"Congratulation! You guessed the number {number_to_guess} in {guess_counter} tries")
+    game_over =input("to return to main menu press the (m) button. to quit the game press the ENTER ")
+    if game_over == "m":
+        print("_______________________________________________")
+        main()
+
+
+    return 0
 
 def guess_the_number_computer(lower_bound,upper_bound):
     feedback = ' '
     computer_guess = math.inf
+    guess_counter = 0
     while feedback != 'c':
+        guess_counter += 1
         computer_guess = randrange(lower_bound,upper_bound)
         feedback = input(f"Is{computer_guess} correct (c), too low (l) or too big (h): ")
         if feedback == "l":
             lower_bound = computer_guess + 1
         elif feedback == "h":
-            upper_bound = computer_guess -1
-        elif lower_bound = upper_bound :
-            print(f"Only number left is {lower_bound}")
+            upper_bound =computer_guess -1
+        if lower_bound ==upper_bound :
+            guess_counter +=1
+            print(f"Only number left is {lower_bound}\n")
+            computer_guess = lower_bound
             break
-    print(f"computer guessed the number{computer_guess}")
+
+    print(f"computer guessed the number{computer_guess} in {guess_counter} tries")
+
+    game_over =input("to return to main menu press the (m) button. to quit the game press the ENTER ")
+    if game_over == "m":
+        print("_______________________________________________")
+        main()
+
    
     return
 
