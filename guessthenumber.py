@@ -31,6 +31,7 @@ def guess_the_number_computer(lower_bound,upper_bound):
     computer_guess = math.inf
     while feedback != 'c':
         computer_guess = randrange(lower_bound,upper_bound)
+        feedback = input(f"Is{computer_guess} correct (c), too low (l) or too big (h): ")
    
     return
 
