@@ -36,6 +36,9 @@ def guess_the_number_computer(lower_bound,upper_bound):
             lower_bound = computer_guess + 1
         elif feedback == "h":
             upper_bound = computer_guess -1
+        elif lower_bound = upper_bound :
+            print(f"Only number left is {lower_bound}")
+            break
     print(f"computer guessed the number{computer_guess}")
    
     return
