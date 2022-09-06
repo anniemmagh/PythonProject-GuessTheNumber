@@ -51,6 +51,7 @@ def guess_the_number_computer(lower_bound,upper_bound):
             computer_guess = lower_bound
             break
 
+
     print(f"computer guessed the number{computer_guess} in {guess_counter} tries")
 
     game_over =input("to return to main menu press the (m) button. to quit the game press the ENTER ")
